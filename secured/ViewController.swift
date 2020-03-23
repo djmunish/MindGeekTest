@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         }
         else{
             Helper.setDefaultsValueFor(value: PasscodeStatus.inactive.rawValue, key: defaultsKey.passcodeStatus)
+            UserDefaults.standard.removeObject(forKey: defaultsKey.encryptedPasscode.rawValue)
         }
     }
     
