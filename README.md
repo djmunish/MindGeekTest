@@ -13,7 +13,15 @@
 4. With deactivated “secured” mode (passcode is not setup and the switch control on “Settings” page was toggled off):
 - user always land on “Settings” page when he launches the app or if he brings it back to foreground.
 
+### Screenshots for various Screens
 
+<p float="left">
+  <img src="https://github.com/djmunish/MindGeekTest/blob/master/Screenshots/1.png" width="200" height="400" />
+<img src="https://github.com/djmunish/MindGeekTest/blob/master/Screenshots/2.png" width="200" height="400" />
+<img src="https://github.com/djmunish/MindGeekTest/blob/master/Screenshots/3.png" width="200" height="400" />
+<img src="https://github.com/djmunish/MindGeekTest/blob/master/Screenshots/4.png" width="200" height="400" />
+<img src="https://github.com/djmunish/MindGeekTest/blob/master/Screenshots/5.png" width="200" height="400" />
+</p>
 
 
 # Note 
