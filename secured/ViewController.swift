@@ -37,9 +37,18 @@ class ViewController: UIViewController {
             self.present(navController, animated: true)
         }
         else{
-            Helper.setDefaultsValueFor(value: PasscodeStatus.inactive.rawValue, key: defaultsKey.passcodeStatus)
-            UserDefaults.standard.removeObject(forKey: defaultsKey.encryptedPasscode.rawValue)
+            resetDefaults()
         }
+    }
+    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
+        Helper.setDefaultsValueFor(value: PasscodeStatus.inactive.rawValue, key: defaultsKey.passcodeStatus)
+
     }
     
     func openPassCodeController(){
