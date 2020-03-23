@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HcF-sX-lcz">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Secured" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activate Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnN-kF-fZJ">
+                                <rect key="frame" x="25" y="118.00000000000001" width="139.66666666666666" height="23.666666666666671"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RMl-Kx-1jk">
+                                <rect key="frame" x="350" y="114.33333333333331" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Gca-5o-aPn"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RMl-Kx-1jk" firstAttribute="centerY" secondItem="qnN-kF-fZJ" secondAttribute="centerY" id="829-Or-dBL"/>
+                            <constraint firstItem="qnN-kF-fZJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CC6-ED-hiQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RMl-Kx-1jk" secondAttribute="trailing" constant="15" id="PPx-88-pyX"/>
+                            <constraint firstItem="qnN-kF-fZJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="VR7-22-CFf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Trk-Z6-tB1"/>
+                    <connections>
+                        <outlet property="toggleBtn" destination="RMl-Kx-1jk" id="0kH-fx-IYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Setup Passcode-->
+        <scene sceneID="7Rk-gb-dN3">
+            <objects>
+                <viewController storyboardIdentifier="setupPasscode" title="Setup Passcode" id="R43-J1-aU9" customClass="SetupViewController" customModule="Secured" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="setupPasscode" id="EVz-G3-2C0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIC-no-fga">
+                                <rect key="frame" x="132" y="405.66666666666669" width="150" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DTw-8h-wvV"/>
+                                    <constraint firstAttribute="height" constant="45" id="s7R-eZ-mUx">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextAction:" destination="R43-J1-aU9" eventType="touchUpInside" id="CpN-DZ-g0o"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Passcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-Zb-oT2">
+                                <rect key="frame" x="30" y="237" width="354" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="50U-mJ-jSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R43-J1-aU9" id="Fz0-XS-W3V"/>
+                                </connections>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV3-8E-GV4">
+                                <rect key="frame" x="141" y="480.66666666666669" width="132" height="30"/>
+                                <state key="normal" title="Passcode Options?"/>
+                                <connections>
+                                    <action selector="passcodeOptionAction:" destination="R43-J1-aU9" eventType="touchUpInside" id="dkv-4V-xVl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passcode doesnt match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6F-Wd-KHz">
+                                <rect key="frame" x="127" y="312" width="160" height="20"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.29411764709999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ajl-bC-UUj"/>
+                                    <constraint firstAttribute="height" constant="20" id="dio-ZB-nDr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Too Many failed attempts, app disabled for 1 minute." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-ub-Dwc">
+                                <rect key="frame" x="80" y="340" width="254" height="35.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8nN-ub-Dwc" firstAttribute="leading" secondItem="4PS-Ou-Asz" secondAttribute="leading" constant="80" id="Eci-hx-dt8"/>
+                            <constraint firstItem="HIC-no-fga" firstAttribute="centerX" secondItem="EVz-G3-2C0" secondAttribute="centerX" id="Enx-zx-gNZ"/>
+                            <constraint firstItem="8nN-ub-Dwc" firstAttribute="top" secondItem="W6F-Wd-KHz" secondAttribute="bottom" constant="8" id="H5h-1F-9Bj"/>
+                            <constraint firstItem="W6F-Wd-KHz" firstAttribute="top" secondItem="CSv-Zb-oT2" secondAttribute="bottom" constant="30" id="Npi-wu-XeL">
+                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="CSv-Zb-oT2" firstAttribute="leading" secondItem="4PS-Ou-Asz" secondAttribute="leading" constant="30" id="P9E-5h-Jjx"/>
+                            <constraint firstItem="HIC-no-fga" firstAttribute="centerY" secondItem="EVz-G3-2C0" secondAttribute="centerY" constant="-20" id="QGW-cZ-faM">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="HIC-no-fga" firstAttribute="top" secondItem="8nN-ub-Dwc" secondAttribute="bottom" constant="30" id="Sdd-em-xgQ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="8nN-ub-Dwc" firstAttribute="centerX" secondItem="EVz-G3-2C0" secondAttribute="centerX" id="Sq6-fb-OV5"/>
+                            <constraint firstItem="RV3-8E-GV4" firstAttribute="top" secondItem="HIC-no-fga" secondAttribute="bottom" constant="30" id="WPr-J2-yk9">
+                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="RV3-8E-GV4" firstAttribute="centerX" secondItem="EVz-G3-2C0" secondAttribute="centerX" id="kH8-hI-ecw"/>
+                            <constraint firstItem="CSv-Zb-oT2" firstAttribute="centerX" secondItem="EVz-G3-2C0" secondAttribute="centerX" id="s7x-6e-AL1"/>
+                            <constraint firstItem="W6F-Wd-KHz" firstAttribute="centerX" secondItem="EVz-G3-2C0" secondAttribute="centerX" id="umY-Eh-r1y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4PS-Ou-Asz"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertLabl" destination="W6F-Wd-KHz" id="8BE-0y-vWR"/>
+                        <outlet property="disabledAlert" destination="8nN-ub-Dwc" id="uQc-pC-0CP"/>
+                        <outlet property="nextBtn" destination="HIC-no-fga" id="iBE-B0-VKY"/>
+                        <outlet property="passcodeField" destination="CSv-Zb-oT2" id="TFT-UC-fEY"/>
+                        <outlet property="passcodeOptionBtn" destination="RV3-8E-GV4" id="PJl-AO-hRE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVC-gZ-XHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-151"/>
+        </scene>
+        <!--Confirm Passcode-->
+        <scene sceneID="f90-eu-GEq">
+            <objects>
+                <viewController storyboardIdentifier="confirmPasscode" title="Confirm Passcode" id="2np-QM-Feb" customClass="ConfirmViewController" customModule="Secured" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vlh-e9-Xag">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcz-eZ-aWo">
+                                <rect key="frame" x="132" y="405.66666666666669" width="150" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="aIh-hn-Jdv"/>
+                                    <constraint firstAttribute="height" constant="45" id="v6Q-2w-k1j">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmAction:" destination="2np-QM-Feb" eventType="touchUpInside" id="QwF-dT-h5I"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Passcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mt2-wf-lfP">
+                                <rect key="frame" x="30" y="235.66666666666663" width="354" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9hf-ip-SNS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2np-QM-Feb" id="Laa-bl-lbn"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passcode doesnt match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vH-yK-nP1">
+                                <rect key="frame" x="127" y="310.66666666666669" width="160" height="20"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.29411764709999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3di-Fa-eHV"/>
+                                    <constraint firstAttribute="width" constant="160" id="iwT-hv-pHx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lcz-eZ-aWo" firstAttribute="centerY" secondItem="vlh-e9-Xag" secondAttribute="centerY" constant="-20" id="3xz-OD-aYD">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="9vH-yK-nP1" firstAttribute="top" secondItem="mt2-wf-lfP" secondAttribute="bottom" constant="30" id="4Mh-Y8-UZl">
+                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="9vH-yK-nP1" firstAttribute="centerX" secondItem="vlh-e9-Xag" secondAttribute="centerX" id="Koz-nb-goc"/>
+                            <constraint firstItem="lcz-eZ-aWo" firstAttribute="top" secondItem="9vH-yK-nP1" secondAttribute="bottom" constant="75" id="Tly-bG-ydN">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="mt2-wf-lfP" firstAttribute="leading" secondItem="dZD-mG-7T5" secondAttribute="leading" constant="30" id="XvD-rb-q9U"/>
+                            <constraint firstItem="mt2-wf-lfP" firstAttribute="centerX" secondItem="vlh-e9-Xag" secondAttribute="centerX" id="eKF-iv-ObP"/>
+                            <constraint firstItem="lcz-eZ-aWo" firstAttribute="centerX" secondItem="vlh-e9-Xag" secondAttribute="centerX" id="oIb-SE-B0M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dZD-mG-7T5"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertLabel" destination="9vH-yK-nP1" id="qrf-mz-gFb"/>
+                        <outlet property="confirmField" destination="mt2-wf-lfP" id="v6S-Mj-cMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKL-yL-x8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2643" y="-158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bMU-YT-dQT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HcF-sX-lcz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hig-9C-x4M">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T4L-vX-NGE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ci-Xx-D4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
